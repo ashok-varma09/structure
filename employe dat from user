@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include<string.h>
+
+struct employe
+{
+	int emp_id;
+	char emp_name[50];
+	int emp_age;
+	char emp_role[50];
+	char emp_city[50];
+	int emp_experience;
+	char emp_company_name[50];
+};
+
+
+int main()
+{
+    int temp;
+    char name[50];
+	struct employe data[2];
+       printf("Enter employe id's :\n");
+	for (int i=0; i<2; i++)
+	{
+		scanf("%d",&data[i].emp_id);
+	
+	}
+	
+	printf("Enter employe names :\n");
+	for (int i=0; i<2; i++)
+	{
+		scanf("%s",data[i].emp_name);
+	
+	}
+	
+	printf("Enter employe age :\n");
+	for (int i=0; i<2; i++)
+	{
+		scanf("%d",&data[i].emp_age);
+	
+	}
+	
+	printf("Enter employe role :\n");
+	for (int i=0; i<2; i++)
+	{
+		scanf("%s",data[i].emp_role);
+	
+	}
+	
+	printf("Enter employe city :\n");
+	for (int i=0; i<2; i++)
+	{
+		scanf("%s",data[i].emp_city);
+	
+	}
+	
+	printf("Enter employe experience :\n");
+	for (int i=0; i<2; i++)
+	{
+		scanf("%d",&data[i].emp_experience);
+	
+	}
+	
+	printf("Enter employe company name :\n");
+	for (int i=0; i<2; i++)
+	{
+		scanf("%s",data[i].emp_company_name);
+	
+	}
+	printf("Enter name : ");
+	scanf("%s",name);
+      for (int i=0;i<3;i++)
+      {
+         if (strcmp(name,data[i].emp_name)==0)
+         {
+             temp=1;
+             printf("Employe Details\n-----------------\nEmploye ID = %d\nEmploye name = %s\nEmploye age = %d\n role = %s\ncity = %s\nExperience= %d\ncompany name = %s\n",data[i].emp_id,data[i].emp_name,data[i].emp_age,data[i].emp_role,data[i].emp_city,data[i].emp_experience,data[i].emp_company_name);
+         }
+      }
+      if(temp==0)
+      {
+          printf("\nInvalid name ");
+      }
+	return 0;
+}
