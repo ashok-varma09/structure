@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include<string.h>
+
+struct student
+{
+	int stu_id;
+	char stu_name[50];
+	int stu_age;
+	char stu_course[50];
+	char stu_city[50];
+	char stu_std[50];
+	char stu_school[50];
+};
+
+
+int main()
+{
+    int temp=0;
+	struct student std[3];
+	char name[50];
+	printf("Enter name : ");
+	scanf("%s",name);
+
+	std[0].stu_id=1;
+	std[1].stu_id=2;
+	std[2].stu_id=3;
+
+	strcpy(std[0].stu_name,"ashok");
+	strcpy(std[1].stu_name,"jayraj");
+	strcpy(std[2].stu_name,"jenish");
+
+	std[0].stu_age=10;
+	std[1].stu_age=20;
+	std[2].stu_age=37;
+
+	strcpy(std[0].stu_course,"BCA");
+	strcpy(std[1].stu_course,"B.com");
+	strcpy(std[2].stu_course,"BBA");
+
+	strcpy(std[0].stu_city,"Surat");
+	strcpy(std[1].stu_city,"Kadodara");
+	strcpy(std[2].stu_city,"Jaipur");
+
+	strcpy(std[0].stu_std,"10th");
+	strcpy(std[1].stu_std,"12th");
+	strcpy(std[2].stu_std,"8th");
+
+
+	strcpy(std[0].stu_school,"RMG maheswari international school");
+	strcpy(std[1].stu_school,"shree vasistha vidyalaya");
+	strcpy(std[2].stu_school,"podar international school");
+
+	for (int i=0; i<3; i++)
+	{
+		if (strcmp(name,std[i].stu_name)==0)
+		{
+		        temp = 1;
+		       	printf("\n\nStudent details \n-----------------\n\nId = %d\nName = %s\nAge = %d\nCourse = %s\nCity = %s\nQualification = %s\nSchool = %s",std[i].stu_id,std[i].stu_name,std[i].stu_age,std[i].stu_course,std[i].stu_city,std[i].stu_std,std[i].stu_school);  
+		    
+		}
+	 
+	}
+	
+		   if(temp==0)
+		   {
+		     printf(" \nInvalid name ");   
+		   }
+	
+
+	return 0;
+}
